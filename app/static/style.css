@@ -36,7 +36,12 @@ body {
 	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
-.header__btns {
+.header__caption {
+	float: left;
+	padding-left: 5%;
+}
+
+.header__btns {	
 	display: flex;
 	justify-content: flex-end;
 	padding-right: 5%;
