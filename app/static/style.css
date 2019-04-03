@@ -38,7 +38,12 @@ body {
 
 .header__caption {
 	float: left;
+	font-family: Lobster;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 5px;
 	padding-left: 5%;
+	margin: 15px;
 }
 
 .header__btns {	
