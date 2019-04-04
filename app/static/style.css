@@ -94,8 +94,17 @@ body {
 	margin-bottom: 150px;
 }
 
+.aboutme__photo {
+	float: left;
+	width: 150px;
+	height: 150px;
+	padding: 10px;
+	border-radius: 10%;
+}
+
 .aboutme__text {
 	font-size: 20px;
+	line-height: 30px;
 	text-align: justify;
 	padding: 20px;
 }
@@ -127,6 +136,14 @@ body {
 
 .project__binary-calculator > a > .icon {
 	background: url('project__binary-calculator.png') no-repeat center;
+}
+
+.project__kissenichka > a > .icon {
+	background: url('project__kissenichka.png') no-repeat center;
+}
+
+.project__smartphone > a > .icon {
+	background: url('project__smartphone.png') no-repeat center;
 }
 
 .caption {

@@ -13,7 +13,7 @@
 		if (window.location.href.indexOf('http://')==0)
 		  window.location=window.location.href.replace('http://','https://');
 	</script>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"/>
 </head>
@@ -35,9 +35,11 @@
 		<div id="aboutme"></div>
 		<section class="main__subsection">
 			<h2 class="subsection__header">About me:</h2>
-			<article class="aboutme__text"> Hello, my name is appalse. I'm a developer.  
-				Please, see below my projects and my blog. 
-				In order to contact me you could use contact form in the bottom of this page or write an email. 
+			<img class="aboutme__photo" src="me.jpg" alt="photo of website developer" />
+			<article class="aboutme__text"> 
+				<p>Hello, my name is Natalia. I'm a developer. I like frontend, css-animations and web development on the whole. </p>
+				<p>My professional experience includes half a year of the development in C++ and 4 years of the software testing and test automation (C++, Python). After having work with web technologies and user interfaces I decided to switch from C++ stack to frontend. At the moment I'm actively learning HTML, CSS, JS and interested in getting a related experience. This website accumulates my projects which were developed during self-education process.</p>
+				<p>Please, see below my projects and my blog. In order to contact me you could use contacts in the bottom of this page or write an email. </p>
 			</article>	
 		</section>
 
@@ -54,6 +56,18 @@
 				<div class="project project__binary-calculator">
 					<a href="binary-calculator" title="Click to open in new tab" target="_blank">
 						<p class="caption">Binary calculator online</p>
+						<div class="icon"></div>
+					</a>		
+				</div>
+				<div class="project project__kissenichka">
+					<a href="https://www.kissenichka.ru" title="Click to open in new tab" target="_blank">
+						<p class="caption">Baby clothes shop on WordPress</p>
+						<div class="icon"></div>
+					</a>		
+				</div>
+				<div class="project project__smartphone">
+					<a href="https://codepen.io/appalse/full/LvPvbg" title="Click to open in new tab" target="_blank">
+						<p class="caption">Smartphone rotation</p>
 						<div class="icon"></div>
 					</a>		
 				</div>
