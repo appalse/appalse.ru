@@ -145,6 +145,10 @@ body {
 	background: url('project__smartphone.png') no-repeat center;
 }
 
+.project__tribute-page > a > .icon {
+	background: url('project__tribute-page.png') no-repeat center;
+}
+
 .caption {
 	font-size: 25px;
 	text-decoration: underline;
