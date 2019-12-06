@@ -14,6 +14,19 @@
 	<script language="JavaScript">
 		if (window.location.href.indexOf('http://')==0)
 		  window.location=window.location.href.replace('http://','https://');
+		function toggleMenu() {
+			let menuBtn = document.getElementById('menu-btn');
+			if (menuBtn.style.display === 'none') {
+				return;
+			}
+			let menuBox = document.getElementById('menu-box');
+			if (menuBox.style.display === 'flex'){
+				menuBox.style.display = 'none';
+			} else {
+				menuBox.style.display = 'flex';
+			};
+			console.log('HELLO from toggle Menu');
+		}
 	</script>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"/>
@@ -21,16 +34,20 @@
 </head>
 <body>
 	<header class="header">
-		<h1 class="header__caption">Appalse.com</h1>
-		<nav class="header__btns">
-			<button class="header__btn" id="header-btn-about"><a href="#">About me</a></button>
-			<button class="header__btn" id="header-btn-projects"><a href="#projects">Projects</a></button>
-			<button class="header__btn" id="header-btn-blog"><a href="#blog">Blog</a></button>
-			<button class="header__btn" id="header-btn-contacts"><a href="#contacts">Contacts</a></button>
+		<h1 class="header__caption"><a href="#">Appalse</a></h1>
+		<div class="header__mobile-menu">
+			<button class="header__menu-btn" id="menu-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+		</div>
+		<nav class="header__btns" id="menu-box">
+			<button class="header__btn" onclick="toggleMenu()" id="header-btn-about"><a href="#">About me</a></button>
+			<button class="header__btn" onclick="toggleMenu()" id="header-btn-projects"><a href="#projects">Projects</a></button>
+			<button class="header__btn" onclick="toggleMenu()" id="header-btn-learning"><a href="#learning">Learning</a></button>
+			<button class="header__btn" onclick="toggleMenu()" id="header-btn-blog"><a href="#blog">Blog</a></button>
+			<button class="header__btn" onclick="toggleMenu()" id="header-btn-contacts"><a href="#contacts">Contacts</a></button>
 		</nav>
 	</header>
 
-	<footer class="footer">&copy; appalse.com 2019</footer>
+	<footer class="footer">&copy; appalse.ru 2019</footer>
 
 	<main class="main">
 
@@ -41,7 +58,7 @@
 			<article class="aboutme__text"> 
 				<p>Hello, my name is Natalia. I'm a frontend developer. I'm keen on the user interfaces development, and I especially enjoy working with React framework, Bootstrap and page making. </p>
 				<p>At the moment I'm actively learning React, Bootstrap, HTML, CSS, JS and I am interested in getting a related experience. This website accumulates my projects which were developed during self-education process.</p>
-				<p>I have graduated from the Moscow Aviation Institute in 2012. After that I started my career in ABBYY as a technical support engineer and rapidly grew to the senior software testing engineer. In 2018 I worked as a C++ developer in small company where I understood that I would like to develop user interfaces, but not in C++. So, beginning from that time I completely immersed into frontend technologies. </p>
+				<p>I have graduated from the Moscow Aviation Institute in 2012. After that I started my career in ABBYY as a technical support engineer and rapidly grew to the senior software testing engineer. In 2018 I worked as a C++ developer in small company where I understood that I would like to develop user interfaces, but in the web. So, beginning from that time I completely immersed into frontend technologies. </p>
 				<p>Please, see below my projects and my blog. In order to contact me you could use contacts in the bottom of this page or write an email. </p>
 			</article>	
 		</section>
@@ -87,6 +104,22 @@
 					</a>		
 				</div>
 			</div>	
+		</section>
+
+		<div id="learning"></div>
+		<section class="main__subsection">
+			<h2 class="subsection__header">My certificates:</h2>
+			<ul class="certificates">
+				<li class="certificate certificate__coursera-frontend">
+					<p class="caption" title="Click to open in new tab"><a href="https://www.coursera.org/account/accomplishments/specialization/certificate/PWMDB5J9ESS8" target="_blank">"Frontend: page making and Javascript", Coursera by MIPT and Yandex</a></p>
+				</li>
+				<li class="certificate certificate__free-code-camp">
+					<p class="caption" title="Click to open in new tab"><a href="https://www.freecodecamp.org/fcc3ad6e5ae-7fed-4b67-ad44-2c42570b0bc3" target="_blank">FreeCodeCamp (in progress)</a></p>
+				</li>
+				<li class="certificate certificate__linux">
+					<p class="caption" title="Click to open in new tab"><a href="C:\Users\kar\Documents\Web\appalse.ru\app\static\certificate__linux-1.png" target="_blank">Linux courses</a></p>
+				</li>
+			</ul>
 		</section>
 
 		<div id="blog"></div>
