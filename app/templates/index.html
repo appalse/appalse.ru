@@ -15,8 +15,7 @@
 		if (window.location.href.indexOf('http://')==0)
 		  window.location=window.location.href.replace('http://','https://');
 		function toggleMenu() {
-			let menuBtn = document.getElementById('menu-btn');
-			if (menuBtn.style.display === 'none') {
+			if (!window.matchMedia("screen and (max-width: 780px)").matches) {
 				return;
 			}
 			let menuBox = document.getElementById('menu-box');
@@ -25,7 +24,6 @@
 			} else {
 				menuBox.style.display = 'flex';
 			};
-			console.log('HELLO from toggle Menu');
 		}
 	</script>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
