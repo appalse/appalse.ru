@@ -159,6 +159,10 @@ html, body {
 	background: url('project__messier-objects.png') no-repeat center;
 }
 
+.project__design-system > a > .icon {
+	background: url('project__design-system.png') no-repeat center;
+}
+
 .caption {
 	font-size: 25px;
 	text-decoration: underline;
