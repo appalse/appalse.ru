@@ -16,7 +16,14 @@ def binaryCalc():
 @app.route("/memoji/")
 def memoji():
 	return render_template('memoji.html');
+
+@app.route("/design-system/")
+def designSystem():
+	return render_template('design-system.html');
 	
+@app.route("/design-system-product/")
+def designSystemProduct():
+	return render_template('design-system-product.html');
 
 @app.errorhandler(404)
 def not_found(error):
