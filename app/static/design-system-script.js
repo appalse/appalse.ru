@@ -3,27 +3,25 @@
 function changeTheme(target) {
 	target.classList.toggle('onoffswitch_checked');
 	const themeElements = document.getElementsByClassName('theme');
-	for (let themeElement of themeElements) {
-		if (themeElement.classList.contains('theme_color_project-inverse') ||
-			themeElement.classList.contains('theme_color_project-default')) {
-				themeElement.classList.toggle('theme_color_project-inverse');
-				themeElement.classList.toggle('theme_color_project-default');
+	for (let i = 0; i < themeElements.length; i++) {
+		if (themeElements[i].classList.contains('theme_color_project-inverse') ||
+			themeElements[i].classList.contains('theme_color_project-default')) {
+				themeElements[i].classList.toggle('theme_color_project-inverse');
+				themeElements[i].classList.toggle('theme_color_project-default');
 		}
 	}
 }
 
 function toggleAccordion(accordion) {
 	let children = accordion.childNodes;
-	for (let child of children) {
-		if (child.classList.contains('e-accordion__more')) {
-			child.style.display = child.style.display ? '' : 'block';
+	for (let i = 0; i < children.length; i++) {
+		if (children[i].classList.contains('e-accordion__more')) {
+			children[i].style.display = children[i].style.display ? '' : 'block';
 		}
 	}
 }
 
 const bodyElement = document.body;
-console.log('bodyELement:');
-console.log(bodyElement);
 if (bodyElement)  {
 	bodyElement.addEventListener('click', function(event) {
 		console.log('event:');
