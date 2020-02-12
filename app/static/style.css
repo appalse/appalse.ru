@@ -163,6 +163,11 @@ html, body {
 	background: url('project__design-system.png') no-repeat center;
 }
 
+.project__sportmaster > a > .icon {
+	background: url('project__sportmaster.png') no-repeat center;
+}
+
+
 .caption {
 	font-size: 25px;
 	text-decoration: underline;
